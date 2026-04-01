@@ -15,6 +15,14 @@ const createWindow = () => {
 }
 
 app.whenReady().then(async () => {
+  const { ElectronBlocker } = await import('@ghostery/adblocker-electron')
+  const fetch = (...args) => import('node-fetch').then(({default: f}) => f(...args))
+
+  const youtubeSession = session.fromPartition('persist:youtube')
+  const blocker = await ElectronBlocker.fromPrebuiltAdsAndTracking(fetch)
+  blocker.enableBlockingInSession(youtubeSession)
+  console.log('Blocker active!')
+
   createWindow()
 })
 
