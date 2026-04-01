@@ -1,6 +1,6 @@
 # Better Youtube
 ... Is a multiplatform youtube client, that is built on electron, and uses adblocker, and userscript to increase user satisfaction when using it.
-
+Supports Windows, Linux AppImage, and Debian installer.
 ## Features
 - @ghostery/electron-adblocker adds adblocker support to this electron app.
 - Return Youtube dislike userscript
