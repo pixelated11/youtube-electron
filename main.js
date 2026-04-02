@@ -7,8 +7,8 @@ const createWindow = () => {
     height: 600,
     webPreferences: {
       webviewTag: true,
-      nodeIntegration: false,
-      contextIsolation: true,
+      nodeIntegration: true,
+      contextIsolation: false,
     },
   })
   win.loadFile('index.html')
